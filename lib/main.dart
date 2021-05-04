@@ -42,7 +42,7 @@ class WelcomePage extends StatelessWidget {
               ),
               onPressed: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => HomePage()));
+                    MaterialPageRoute(builder: (context) => LoginPage()));
               },
             ),
           ],
@@ -53,15 +53,71 @@ class WelcomePage extends StatelessWidget {
 }
 
 class LoginPage extends StatelessWidget {
+  final myAccount = TextEditingController();
+  final myPassword = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: new Column(
+      body: new Center(
+          child: Column(
         children: <Widget>[
+          SizedBox(
+            height: 60,
+          ),
           Image.asset("assets/loginpage.png"),
-          Text("data"),
+          Text(""),
+          Container(
+            width: 300,
+            height: 50,
+            child: TextField(
+              controller: myAccount,
+              decoration: InputDecoration(
+                border: InputBorder.none,
+                fillColor: Colors.white,
+                filled: true,
+                hintText: "Username",
+              ),
+            ),
+          ),
+          Text(""),
+          Container(
+            width: 300,
+            height: 50,
+            child: TextField(
+              controller: myPassword,
+              obscureText: true,
+              decoration: InputDecoration(
+                border: InputBorder.none,
+                fillColor: Colors.white,
+                filled: true,
+                hintText: "Password",
+              ),
+            ),
+          ),
+          Text(""),
+          Container(
+            width: 300,
+            height: 50,
+            child: RaisedButton(
+              child: Text(
+                "Login",
+                style: TextStyle(
+                  fontSize: 22,
+                  color: Colors.white,
+                ),
+              ),
+              color: Colors.green,
+              textColor: Colors.white,
+              elevation: 20,
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => HomePage()));
+              },
+            ),
+          ),
         ],
-      ),
+      )),
     );
   }
 }
