@@ -244,7 +244,7 @@ class CookPage extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.push(
-              context, MaterialPageRoute(builder: (context) => OptionPage()));
+              context, MaterialPageRoute(builder: (context) => MyHomePage1()));
         },
         child: Icon(Icons.add),
       ),
@@ -257,6 +257,13 @@ class MyHomePage extends StatefulWidget {
   final String title;
   @override
   _TrackPage createState() => _TrackPage();
+}
+
+class MyHomePage1 extends StatefulWidget {
+  MyHomePage1({Key key, this.title}) : super(key: key);
+  final String title;
+  @override
+  _OptionPage createState() => _OptionPage();
 }
 
 class _TrackPage extends State<MyHomePage> {
@@ -390,7 +397,9 @@ class _TrackPage extends State<MyHomePage> {
   }
 }
 
-class OptionPage extends StatelessWidget {
+class _OptionPage extends State<MyHomePage1> {
+  bool _hasBeenPressed = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -399,7 +408,363 @@ class OptionPage extends StatelessWidget {
       ], title: Text("Options")),
       body: Column(
         children: [
-          Text("data"),
+          Text(
+            "Meats",
+            style: TextStyle(
+              fontSize: 30,
+              color: Colors.green,
+            ),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Row(
+            children: <Widget>[
+              RaisedButton(
+                  child: new Text("Change Color"),
+                  textColor: Colors.white,
+                  color: _hasBeenPressed ? Colors.blueGrey : Colors.green,
+                  onPressed: () => {
+                        setState(() {
+                          _hasBeenPressed = !_hasBeenPressed;
+                        })
+                      }),
+              SizedBox(
+                width: 20,
+              ),
+              RaisedButton(
+                  child: new Text("Change Color"),
+                  textColor: Colors.white,
+                  color: _hasBeenPressed ? Colors.blueGrey : Colors.green,
+                  onPressed: () => {
+                        setState(() {
+                          _hasBeenPressed = !_hasBeenPressed;
+                        })
+                      }),
+              SizedBox(
+                width: 20,
+              ),
+              RaisedButton(
+                  child: new Text("Change Color"),
+                  textColor: Colors.white,
+                  color: _hasBeenPressed ? Colors.blueGrey : Colors.green,
+                  onPressed: () => {
+                        setState(() {
+                          _hasBeenPressed = !_hasBeenPressed;
+                        })
+                      }),
+            ],
+          ),
+          Row(
+            children: <Widget>[
+              RaisedButton(
+                  child: new Text("Change Color"),
+                  textColor: Colors.white,
+                  color: _hasBeenPressed ? Colors.blueGrey : Colors.green,
+                  onPressed: () => {
+                        setState(() {
+                          _hasBeenPressed = !_hasBeenPressed;
+                        })
+                      }),
+              SizedBox(
+                width: 20,
+              ),
+              RaisedButton(
+                  child: new Text("Change Color"),
+                  textColor: Colors.white,
+                  color: _hasBeenPressed ? Colors.blueGrey : Colors.green,
+                  onPressed: () => {
+                        setState(() {
+                          _hasBeenPressed = !_hasBeenPressed;
+                        })
+                      }),
+              SizedBox(
+                width: 20,
+              ),
+              RaisedButton(
+                  child: new Text("Change Color"),
+                  textColor: Colors.white,
+                  color: _hasBeenPressed ? Colors.blueGrey : Colors.green,
+                  onPressed: () => {
+                        setState(() {
+                          _hasBeenPressed = !_hasBeenPressed;
+                        })
+                      }),
+            ],
+          ),
+          Row(
+            children: <Widget>[
+              RaisedButton(
+                  child: new Text("Change Color"),
+                  textColor: Colors.white,
+                  color: _hasBeenPressed ? Colors.blueGrey : Colors.green,
+                  onPressed: () => {
+                        setState(() {
+                          _hasBeenPressed = !_hasBeenPressed;
+                        })
+                      }),
+              SizedBox(
+                width: 20,
+              ),
+              RaisedButton(
+                  child: new Text("Change Color"),
+                  textColor: Colors.white,
+                  color: _hasBeenPressed ? Colors.blueGrey : Colors.green,
+                  onPressed: () => {
+                        setState(() {
+                          _hasBeenPressed = !_hasBeenPressed;
+                        })
+                      }),
+              SizedBox(
+                width: 20,
+              ),
+              RaisedButton(
+                  child: new Text("Change Color"),
+                  textColor: Colors.white,
+                  color: _hasBeenPressed ? Colors.blueGrey : Colors.green,
+                  onPressed: () => {
+                        setState(() {
+                          _hasBeenPressed = !_hasBeenPressed;
+                        })
+                      }),
+            ],
+          ),
+          Text(
+            "Veggies",
+            style: TextStyle(
+              fontSize: 30,
+              color: Colors.green,
+            ),
+          ),
+          Row(
+            children: <Widget>[
+              RaisedButton(
+                  child: new Text("Change Color"),
+                  textColor: Colors.white,
+                  color: _hasBeenPressed ? Colors.blueGrey : Colors.green,
+                  onPressed: () => {
+                        setState(() {
+                          _hasBeenPressed = !_hasBeenPressed;
+                        })
+                      }),
+              SizedBox(
+                width: 20,
+              ),
+              RaisedButton(
+                  child: new Text("Change Color"),
+                  textColor: Colors.white,
+                  color: _hasBeenPressed ? Colors.blueGrey : Colors.green,
+                  onPressed: () => {
+                        setState(() {
+                          _hasBeenPressed = !_hasBeenPressed;
+                        })
+                      }),
+              SizedBox(
+                width: 20,
+              ),
+              RaisedButton(
+                  child: new Text("Change Color"),
+                  textColor: Colors.white,
+                  color: _hasBeenPressed ? Colors.blueGrey : Colors.green,
+                  onPressed: () => {
+                        setState(() {
+                          _hasBeenPressed = !_hasBeenPressed;
+                        })
+                      }),
+            ],
+          ),
+          Row(
+            children: <Widget>[
+              RaisedButton(
+                  child: new Text("Change Color"),
+                  textColor: Colors.white,
+                  color: _hasBeenPressed ? Colors.blueGrey : Colors.green,
+                  onPressed: () => {
+                        setState(() {
+                          _hasBeenPressed = !_hasBeenPressed;
+                        })
+                      }),
+              SizedBox(
+                width: 20,
+              ),
+              RaisedButton(
+                  child: new Text("Change Color"),
+                  textColor: Colors.white,
+                  color: _hasBeenPressed ? Colors.blueGrey : Colors.green,
+                  onPressed: () => {
+                        setState(() {
+                          _hasBeenPressed = !_hasBeenPressed;
+                        })
+                      }),
+              SizedBox(
+                width: 20,
+              ),
+              RaisedButton(
+                  child: new Text("Change Color"),
+                  textColor: Colors.white,
+                  color: _hasBeenPressed ? Colors.blueGrey : Colors.green,
+                  onPressed: () => {
+                        setState(() {
+                          _hasBeenPressed = !_hasBeenPressed;
+                        })
+                      }),
+            ],
+          ),
+          Row(
+            children: <Widget>[
+              RaisedButton(
+                  child: new Text("Change Color"),
+                  textColor: Colors.white,
+                  color: _hasBeenPressed ? Colors.blueGrey : Colors.green,
+                  onPressed: () => {
+                        setState(() {
+                          _hasBeenPressed = !_hasBeenPressed;
+                        })
+                      }),
+              SizedBox(
+                width: 20,
+              ),
+              RaisedButton(
+                  child: new Text("Change Color"),
+                  textColor: Colors.white,
+                  color: _hasBeenPressed ? Colors.blueGrey : Colors.green,
+                  onPressed: () => {
+                        setState(() {
+                          _hasBeenPressed = !_hasBeenPressed;
+                        })
+                      }),
+              SizedBox(
+                width: 20,
+              ),
+              RaisedButton(
+                  child: new Text("Change Color"),
+                  textColor: Colors.white,
+                  color: _hasBeenPressed ? Colors.blueGrey : Colors.green,
+                  onPressed: () => {
+                        setState(() {
+                          _hasBeenPressed = !_hasBeenPressed;
+                        })
+                      }),
+            ],
+          ),
+          Text(
+            "Fruits",
+            style: TextStyle(
+              fontSize: 30,
+              color: Colors.green,
+            ),
+          ),
+          Row(
+            children: <Widget>[
+              RaisedButton(
+                  child: new Text("Change Color"),
+                  textColor: Colors.white,
+                  color: _hasBeenPressed ? Colors.blueGrey : Colors.green,
+                  onPressed: () => {
+                        setState(() {
+                          _hasBeenPressed = !_hasBeenPressed;
+                        })
+                      }),
+              SizedBox(
+                width: 20,
+              ),
+              RaisedButton(
+                  child: new Text("Change Color"),
+                  textColor: Colors.white,
+                  color: _hasBeenPressed ? Colors.blueGrey : Colors.green,
+                  onPressed: () => {
+                        setState(() {
+                          _hasBeenPressed = !_hasBeenPressed;
+                        })
+                      }),
+              SizedBox(
+                width: 20,
+              ),
+              RaisedButton(
+                  child: new Text("Change Color"),
+                  textColor: Colors.white,
+                  color: _hasBeenPressed ? Colors.blueGrey : Colors.green,
+                  onPressed: () => {
+                        setState(() {
+                          _hasBeenPressed = !_hasBeenPressed;
+                        })
+                      }),
+            ],
+          ),
+          Row(
+            children: <Widget>[
+              RaisedButton(
+                  child: new Text("Change Color"),
+                  textColor: Colors.white,
+                  color: _hasBeenPressed ? Colors.blueGrey : Colors.green,
+                  onPressed: () => {
+                        setState(() {
+                          _hasBeenPressed = !_hasBeenPressed;
+                        })
+                      }),
+              SizedBox(
+                width: 20,
+              ),
+              RaisedButton(
+                  child: new Text("Change Color"),
+                  textColor: Colors.white,
+                  color: _hasBeenPressed ? Colors.blueGrey : Colors.green,
+                  onPressed: () => {
+                        setState(() {
+                          _hasBeenPressed = !_hasBeenPressed;
+                        })
+                      }),
+              SizedBox(
+                width: 20,
+              ),
+              RaisedButton(
+                  child: new Text("Change Color"),
+                  textColor: Colors.white,
+                  color: _hasBeenPressed ? Colors.blueGrey : Colors.green,
+                  onPressed: () => {
+                        setState(() {
+                          _hasBeenPressed = !_hasBeenPressed;
+                        })
+                      }),
+            ],
+          ),
+          Row(
+            children: <Widget>[
+              RaisedButton(
+                  child: new Text("Change Color"),
+                  textColor: Colors.white,
+                  color: _hasBeenPressed ? Colors.blueGrey : Colors.green,
+                  onPressed: () => {
+                        setState(() {
+                          _hasBeenPressed = !_hasBeenPressed;
+                        })
+                      }),
+              SizedBox(
+                width: 20,
+              ),
+              RaisedButton(
+                  child: new Text("Change Color"),
+                  textColor: Colors.white,
+                  color: _hasBeenPressed ? Colors.blueGrey : Colors.green,
+                  onPressed: () => {
+                        setState(() {
+                          _hasBeenPressed = !_hasBeenPressed;
+                        })
+                      }),
+              SizedBox(
+                width: 20,
+              ),
+              RaisedButton(
+                  child: new Text("Change Color"),
+                  textColor: Colors.white,
+                  color: _hasBeenPressed ? Colors.blueGrey : Colors.green,
+                  onPressed: () => {
+                        setState(() {
+                          _hasBeenPressed = !_hasBeenPressed;
+                        })
+                      }),
+            ],
+          ),
         ],
       ),
     );
