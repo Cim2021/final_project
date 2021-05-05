@@ -1,3 +1,4 @@
+import 'package:final_project/recipes.dart';
 import 'package:flutter/material.dart';
 
 class homePage extends StatelessWidget {
@@ -403,9 +404,18 @@ class _OptionPage extends State<MyHomePage1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(actions: <Widget>[
-        IconButton(icon: Icon(Icons.check_circle_outline), onPressed: null)
-      ], title: Text("Options")),
+      appBar: AppBar(
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.check_circle_outline),
+            onPressed: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => Recipes()));
+            },
+          )
+        ],
+        title: Text("Options"),
+      ),
       body: Column(
         children: [
           Text(
@@ -419,9 +429,10 @@ class _OptionPage extends State<MyHomePage1> {
             height: 10,
           ),
           Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               RaisedButton(
-                  child: new Text("Change Color"),
+                  child: new Text(" Steak "),
                   textColor: Colors.white,
                   color: _hasBeenPressed ? Colors.blueGrey : Colors.green,
                   onPressed: () => {
@@ -433,7 +444,7 @@ class _OptionPage extends State<MyHomePage1> {
                 width: 20,
               ),
               RaisedButton(
-                  child: new Text("Change Color"),
+                  child: new Text("Chicken"),
                   textColor: Colors.white,
                   color: _hasBeenPressed ? Colors.blueGrey : Colors.green,
                   onPressed: () => {
@@ -445,81 +456,7 @@ class _OptionPage extends State<MyHomePage1> {
                 width: 20,
               ),
               RaisedButton(
-                  child: new Text("Change Color"),
-                  textColor: Colors.white,
-                  color: _hasBeenPressed ? Colors.blueGrey : Colors.green,
-                  onPressed: () => {
-                        setState(() {
-                          _hasBeenPressed = !_hasBeenPressed;
-                        })
-                      }),
-            ],
-          ),
-          Row(
-            children: <Widget>[
-              RaisedButton(
-                  child: new Text("Change Color"),
-                  textColor: Colors.white,
-                  color: _hasBeenPressed ? Colors.blueGrey : Colors.green,
-                  onPressed: () => {
-                        setState(() {
-                          _hasBeenPressed = !_hasBeenPressed;
-                        })
-                      }),
-              SizedBox(
-                width: 20,
-              ),
-              RaisedButton(
-                  child: new Text("Change Color"),
-                  textColor: Colors.white,
-                  color: _hasBeenPressed ? Colors.blueGrey : Colors.green,
-                  onPressed: () => {
-                        setState(() {
-                          _hasBeenPressed = !_hasBeenPressed;
-                        })
-                      }),
-              SizedBox(
-                width: 20,
-              ),
-              RaisedButton(
-                  child: new Text("Change Color"),
-                  textColor: Colors.white,
-                  color: _hasBeenPressed ? Colors.blueGrey : Colors.green,
-                  onPressed: () => {
-                        setState(() {
-                          _hasBeenPressed = !_hasBeenPressed;
-                        })
-                      }),
-            ],
-          ),
-          Row(
-            children: <Widget>[
-              RaisedButton(
-                  child: new Text("Change Color"),
-                  textColor: Colors.white,
-                  color: _hasBeenPressed ? Colors.blueGrey : Colors.green,
-                  onPressed: () => {
-                        setState(() {
-                          _hasBeenPressed = !_hasBeenPressed;
-                        })
-                      }),
-              SizedBox(
-                width: 20,
-              ),
-              RaisedButton(
-                  child: new Text("Change Color"),
-                  textColor: Colors.white,
-                  color: _hasBeenPressed ? Colors.blueGrey : Colors.green,
-                  onPressed: () => {
-                        setState(() {
-                          _hasBeenPressed = !_hasBeenPressed;
-                        })
-                      }),
-              SizedBox(
-                width: 20,
-              ),
-              RaisedButton(
-                  child: new Text("Change Color"),
+                  child: new Text("Fish"),
                   textColor: Colors.white,
                   color: _hasBeenPressed ? Colors.blueGrey : Colors.green,
                   onPressed: () => {
@@ -537,9 +474,10 @@ class _OptionPage extends State<MyHomePage1> {
             ),
           ),
           Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               RaisedButton(
-                  child: new Text("Change Color"),
+                  child: new Text("Asparagus"),
                   textColor: Colors.white,
                   color: _hasBeenPressed ? Colors.blueGrey : Colors.green,
                   onPressed: () => {
@@ -551,7 +489,7 @@ class _OptionPage extends State<MyHomePage1> {
                 width: 20,
               ),
               RaisedButton(
-                  child: new Text("Change Color"),
+                  child: new Text("Broccoli"),
                   textColor: Colors.white,
                   color: _hasBeenPressed ? Colors.blueGrey : Colors.green,
                   onPressed: () => {
@@ -563,7 +501,7 @@ class _OptionPage extends State<MyHomePage1> {
                 width: 20,
               ),
               RaisedButton(
-                  child: new Text("Change Color"),
+                  child: new Text("Cauliflower"),
                   textColor: Colors.white,
                   color: _hasBeenPressed ? Colors.blueGrey : Colors.green,
                   onPressed: () => {
@@ -574,9 +512,10 @@ class _OptionPage extends State<MyHomePage1> {
             ],
           ),
           Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               RaisedButton(
-                  child: new Text("Change Color"),
+                  child: new Text("Carrots"),
                   textColor: Colors.white,
                   color: _hasBeenPressed ? Colors.blueGrey : Colors.green,
                   onPressed: () => {
@@ -588,7 +527,7 @@ class _OptionPage extends State<MyHomePage1> {
                 width: 20,
               ),
               RaisedButton(
-                  child: new Text("Change Color"),
+                  child: new Text("Celery"),
                   textColor: Colors.white,
                   color: _hasBeenPressed ? Colors.blueGrey : Colors.green,
                   onPressed: () => {
@@ -600,7 +539,7 @@ class _OptionPage extends State<MyHomePage1> {
                 width: 20,
               ),
               RaisedButton(
-                  child: new Text("Change Color"),
+                  child: new Text("Garlic"),
                   textColor: Colors.white,
                   color: _hasBeenPressed ? Colors.blueGrey : Colors.green,
                   onPressed: () => {
@@ -611,9 +550,10 @@ class _OptionPage extends State<MyHomePage1> {
             ],
           ),
           Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               RaisedButton(
-                  child: new Text("Change Color"),
+                  child: new Text("Lettuce"),
                   textColor: Colors.white,
                   color: _hasBeenPressed ? Colors.blueGrey : Colors.green,
                   onPressed: () => {
@@ -625,7 +565,7 @@ class _OptionPage extends State<MyHomePage1> {
                 width: 20,
               ),
               RaisedButton(
-                  child: new Text("Change Color"),
+                  child: new Text("Spinach"),
                   textColor: Colors.white,
                   color: _hasBeenPressed ? Colors.blueGrey : Colors.green,
                   onPressed: () => {
@@ -637,7 +577,7 @@ class _OptionPage extends State<MyHomePage1> {
                 width: 20,
               ),
               RaisedButton(
-                  child: new Text("Change Color"),
+                  child: new Text("Sweetcorn"),
                   textColor: Colors.white,
                   color: _hasBeenPressed ? Colors.blueGrey : Colors.green,
                   onPressed: () => {
@@ -655,9 +595,10 @@ class _OptionPage extends State<MyHomePage1> {
             ),
           ),
           Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               RaisedButton(
-                  child: new Text("Change Color"),
+                  child: new Text("BlueBerry"),
                   textColor: Colors.white,
                   color: _hasBeenPressed ? Colors.blueGrey : Colors.green,
                   onPressed: () => {
@@ -669,7 +610,7 @@ class _OptionPage extends State<MyHomePage1> {
                 width: 20,
               ),
               RaisedButton(
-                  child: new Text("Change Color"),
+                  child: new Text("PineApple"),
                   textColor: Colors.white,
                   color: _hasBeenPressed ? Colors.blueGrey : Colors.green,
                   onPressed: () => {
@@ -681,7 +622,7 @@ class _OptionPage extends State<MyHomePage1> {
                 width: 20,
               ),
               RaisedButton(
-                  child: new Text("Change Color"),
+                  child: new Text("Grape"),
                   textColor: Colors.white,
                   color: _hasBeenPressed ? Colors.blueGrey : Colors.green,
                   onPressed: () => {
@@ -692,9 +633,10 @@ class _OptionPage extends State<MyHomePage1> {
             ],
           ),
           Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               RaisedButton(
-                  child: new Text("Change Color"),
+                  child: new Text("Peach"),
                   textColor: Colors.white,
                   color: _hasBeenPressed ? Colors.blueGrey : Colors.green,
                   onPressed: () => {
@@ -706,7 +648,7 @@ class _OptionPage extends State<MyHomePage1> {
                 width: 20,
               ),
               RaisedButton(
-                  child: new Text("Change Color"),
+                  child: new Text("Orange"),
                   textColor: Colors.white,
                   color: _hasBeenPressed ? Colors.blueGrey : Colors.green,
                   onPressed: () => {
@@ -718,7 +660,7 @@ class _OptionPage extends State<MyHomePage1> {
                 width: 20,
               ),
               RaisedButton(
-                  child: new Text("Change Color"),
+                  child: new Text("Cherry"),
                   textColor: Colors.white,
                   color: _hasBeenPressed ? Colors.blueGrey : Colors.green,
                   onPressed: () => {
@@ -729,9 +671,10 @@ class _OptionPage extends State<MyHomePage1> {
             ],
           ),
           Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               RaisedButton(
-                  child: new Text("Change Color"),
+                  child: new Text("Banana"),
                   textColor: Colors.white,
                   color: _hasBeenPressed ? Colors.blueGrey : Colors.green,
                   onPressed: () => {
@@ -743,7 +686,7 @@ class _OptionPage extends State<MyHomePage1> {
                 width: 20,
               ),
               RaisedButton(
-                  child: new Text("Change Color"),
+                  child: new Text("Strawberry"),
                   textColor: Colors.white,
                   color: _hasBeenPressed ? Colors.blueGrey : Colors.green,
                   onPressed: () => {
@@ -755,7 +698,7 @@ class _OptionPage extends State<MyHomePage1> {
                 width: 20,
               ),
               RaisedButton(
-                  child: new Text("Change Color"),
+                  child: new Text("Apple"),
                   textColor: Colors.white,
                   color: _hasBeenPressed ? Colors.blueGrey : Colors.green,
                   onPressed: () => {

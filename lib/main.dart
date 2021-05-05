@@ -31,13 +31,17 @@ class WelcomePage extends StatelessWidget {
                 color: Colors.green,
               ),
             ),
-            SizedBox(height: 500),
-            TextButton(
+            SizedBox(height: 600),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                primary: Colors.green,
+                onPrimary: Colors.white,
+              ),
               child: Text(
                 "Grow with us",
                 style: TextStyle(
                   fontSize: 22,
-                  color: Colors.green,
+                  color: Colors.white,
                 ),
               ),
               onPressed: () {

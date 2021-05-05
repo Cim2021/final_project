@@ -1,3 +1,4 @@
+import 'package:flappy_search_bar/flappy_search_bar.dart';
 import 'package:flutter/material.dart';
 
 class searchPage extends StatelessWidget {
@@ -7,6 +8,12 @@ class searchPage extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: Text("Search"),
+      ),
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: SearchBar(),
+        ),
       ),
     );
   }
