@@ -67,7 +67,7 @@ class homePage extends StatelessWidget {
                 color: Colors.green,
                 onPressed: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => TrackPage()));
+                      MaterialPageRoute(builder: (context) => MyHomePage()));
                 },
               ),
             ],
@@ -252,13 +252,139 @@ class CookPage extends StatelessWidget {
   }
 }
 
-class TrackPage extends StatelessWidget {
+class MyHomePage extends StatefulWidget {
+  MyHomePage({Key key, this.title}) : super(key: key);
+  final String title;
+  @override
+  _TrackPage createState() => _TrackPage();
+}
+
+class _TrackPage extends State<MyHomePage> {
+  DateTime dayPicker = DateTime.now();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("Tracker")),
       body: Center(
-        child: Text("data"),
+        child: Column(
+          children: [
+            MonthPicker(
+              selectedDate: (dayPicker),
+              onChanged: (time) {
+                setState(() {
+                  dayPicker = time;
+                });
+              },
+              firstDate: DateTime(2000, 1),
+              lastDate: DateTime(2100, 12),
+            ),
+            SizedBox(
+              height: 15,
+            ),
+            Container(
+              child: Row(
+                children: [
+                  SizedBox(
+                    width: 35,
+                  ),
+                  Text(
+                    "Calorie",
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.white,
+                    ),
+                  ),
+                  SizedBox(
+                    width: 45,
+                  ),
+                  Slider(
+                    min: 0,
+                    max: 10,
+                    divisions: 5,
+                    value: 10,
+                    onChanged: null,
+                    label: "Subscription Number",
+                  )
+                ],
+              ),
+              width: 350,
+              height: 95,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(30)),
+                  color: Colors.green),
+            ),
+            SizedBox(
+              height: 15,
+            ),
+            Container(
+              child: Row(
+                children: [
+                  SizedBox(
+                    width: 42,
+                  ),
+                  Text(
+                    "Sugar",
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.white,
+                    ),
+                  ),
+                  SizedBox(
+                    width: 45,
+                  ),
+                  Slider(
+                    min: 0,
+                    max: 10,
+                    divisions: 5,
+                    value: 8,
+                    onChanged: null,
+                    label: "Subscription Number",
+                  )
+                ],
+              ),
+              width: 350,
+              height: 95,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(30)),
+                  color: Colors.green),
+            ),
+            SizedBox(
+              height: 15,
+            ),
+            Container(
+              child: Row(
+                children: [
+                  SizedBox(
+                    width: 35,
+                  ),
+                  Text(
+                    "Protein",
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.white,
+                    ),
+                  ),
+                  SizedBox(
+                    width: 45,
+                  ),
+                  Slider(
+                    min: 0,
+                    max: 10,
+                    divisions: 5,
+                    value: 0,
+                    onChanged: null,
+                    label: "Subscription Number",
+                  )
+                ],
+              ),
+              width: 350,
+              height: 95,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(30)),
+                  color: Colors.green),
+            ),
+          ],
+        ),
       ),
     );
   }
